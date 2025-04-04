@@ -52,12 +52,6 @@ body {
   margin-bottom: 1rem;
 }
 
-.hero-name {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
 .lead {
   font-size: 1.2rem;
   max-width: 600px;
@@ -118,77 +112,5 @@ body {
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
-}
-
-/* 🎯 Resume Button & Social Icons */
-.hero-actions {
-  margin-top: 2rem;
-}
-
-.btn-resume {
-  background: #fcd34d;
-  color: #111827;
-  padding: 0.6rem 1.2rem;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.btn-resume:hover {
-  background: #fbbf24;
-}
-
-.social-icons {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.social-icons img {
-  width: 16px;
-  height: 16px;
-  filter: brightness(0) invert(1);
-  transition: transform 0.3s;
-}
-
-.social-icons a:hover img {
-  transform: scale(1.1);
-}
-.hero-actions {
-  margin-top: 2rem;
-}
-
-.btn-resume {
-  background: #fcd34d;
-  color: #111827;
-  padding: 0.6rem 1.2rem;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.btn-resume:hover {
-  background: #fbbf24;
-}
-
-.social-icons {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.social-icons img {
-  width: 16px;
-  height: 16px;
-  filter: brightness(0) invert(1);
-  transition: transform 0.3s;
-}
-
-.social-icons a:hover img {
-  transform: scale(1.1);
 }
 
