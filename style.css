@@ -56,16 +56,6 @@ body {
   animation: slideUp 1s ease-out;
 }
 
-.profile-img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #38bdf8;
-  margin-bottom: 1rem;
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
-}
-
 .lead {
   font-size: 1.3rem;
   max-width: 600px;
@@ -145,4 +135,41 @@ body {
 @keyframes slideUp {
   from { transform: translateY(30px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
+}
+
+/* 🔥 Rotating Ring Around Profile */
+.photo-frame {
+  position: relative;
+  display: inline-block;
+  width: 166px;
+  height: 166px;
+  margin-bottom: 1rem;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #0f172a;
+  position: relative;
+  z-index: 2;
+}
+
+.rotating-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 166px;
+  height: 166px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #38bdf8, #0ea5e9, #3b82f6, #38bdf8);
+  animation: spin 4s linear infinite;
+  z-index: 1;
+  filter: blur(2px);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
