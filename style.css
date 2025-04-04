@@ -146,6 +146,19 @@ body {
   filter: brightness(0) invert(1);
   transition: transform 0.3s;
 }
+.hero-name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+.social-icons img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+}
+
 
 .social-icons a:hover img {
   transform: scale(1.1);
