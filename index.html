@@ -3,56 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Your Name | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav class="container">
-      <h1>My Portfolio</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">YourName</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <section class="hero">
+    <div class="container hero-content">
+      <img src="your-photo.jpg" alt="Your Photo" class="hero-img" />
+      <div>
+        <h2>Hello, I'm <span class="highlight">Your Name</span></h2>
+        <p>A creative developer who builds clean, responsive websites.</p>
+        <a href="#contact" class="btn">Hire Me</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
     <div class="container">
-      <h2>Hello, I'm <span class="highlight">Your Name</span></h2>
-      <p>I'm a developer who loves building clean, modern websites.</p>
-      <a href="#contact" class="btn">Hire Me</a>
+      <h2>About Me</h2>
+      <p>Write a short bio here. Mention your background, tech skills, and what you’re passionate about.</p>
     </div>
   </section>
 
-  <section id="about" class="about container">
-    <h2>About Me</h2>
-    <p>This is where you write a little about yourself—your background, your interests, and what you're passionate about.</p>
-  </section>
-
-  <section id="projects" class="projects container">
-    <h2>My Work</h2>
-    <div class="project-list">
-      <div class="project">
-        <h3>Project Title</h3>
-        <p>Short description of what this project does and why it's cool.</p>
-      </div>
-      <div class="project">
-        <h3>Another Project</h3>
-        <p>Description of another project with some details.</p>
+  <section id="projects" class="section bg-light">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="card">
+          <h3>Project One</h3>
+          <p>A short description of your project goes here.</p>
+        </div>
+        <div class="card">
+          <h3>Project Two</h3>
+          <p>Another cool project with a brief explanation.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact container">
-    <h2>Contact</h2>
-    <p>Get in touch at <a href="mailto:your@email.com">your@email.com</a></p>
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email me at <a href="mailto:your@email.com">your@email.com</a></p>
+    </div>
   </section>
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Your Name</p>
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
     </div>
   </footer>
 </body>
