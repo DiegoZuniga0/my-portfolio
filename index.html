@@ -1,49 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>My Portfolio</h1>
-    <nav>
+    <nav class="container">
+      <h1>My Portfolio</h1>
       <ul>
-        <li><a href="#work">Work</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
-  
-  <main>
-    <!-- Work Section -->
-    <section id="work" class="portfolio">
-      <article class="portfolio-item">
-        <img src="project1.jpg" alt="Project 1">
-        <h2>Project 1</h2>
-        <p>Description of Project 1.</p>
-      </article>
-      <!-- Repeat portfolio-item for additional projects -->
-    </section>
-    
-    <!-- About Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>A brief introduction about yourself.</p>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email me at <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    </section>
-  </main>
-  
-  <footer>
-    <p>&copy; 2025 My Portfolio</p>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Hello, I'm <span class="highlight">Your Name</span></h2>
+      <p>I'm a developer who loves building clean, modern websites.</p>
+      <a href="#contact" class="btn">Hire Me</a>
+    </div>
+  </section>
+
+  <section id="about" class="about container">
+    <h2>About Me</h2>
+    <p>This is where you write a little about yourself—your background, your interests, and what you're passionate about.</p>
+  </section>
+
+  <section id="projects" class="projects container">
+    <h2>My Work</h2>
+    <div class="project-list">
+      <div class="project">
+        <h3>Project Title</h3>
+        <p>Short description of what this project does and why it's cool.</p>
+      </div>
+      <div class="project">
+        <h3>Another Project</h3>
+        <p>Description of another project with some details.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact container">
+    <h2>Contact</h2>
+    <p>Get in touch at <a href="mailto:your@email.com">your@email.com</a></p>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Your Name</p>
+    </div>
   </footer>
 </body>
 </html>
