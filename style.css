@@ -56,6 +56,16 @@ body {
   animation: slideUp 1s ease-out;
 }
 
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
 .lead {
   font-size: 1.3rem;
   max-width: 600px;
