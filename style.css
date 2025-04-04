@@ -52,6 +52,12 @@ body {
   margin-bottom: 1rem;
 }
 
+.hero-name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
 .lead {
   font-size: 1.2rem;
   max-width: 600px;
@@ -114,7 +120,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* 🎯 Added styles for Resume Button and Social Icons */
+/* 🎯 Resume Button & Social Icons */
 .hero-actions {
   margin-top: 2rem;
 }
@@ -137,28 +143,15 @@ body {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .social-icons img {
-  width: 30px;
-  height: 30px;
+  width: 16px;
+  height: 16px;
   filter: brightness(0) invert(1);
   transition: transform 0.3s;
 }
-.hero-name {
-  font-size: 3rem;
-  font-weight: 700;
-  margin: 0 0 1rem;
-}
-
-.social-icons img {
-  width: 22px;
-  height: 22px;
-  filter: brightness(0) invert(1);
-  transition: transform 0.3s;
-}
-
 
 .social-icons a:hover img {
   transform: scale(1.1);
