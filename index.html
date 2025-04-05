@@ -3,52 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Diego Zuniga | Home</title>
+  <title>Diego Zuniga | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navbar -->
   <header class="alt-navbar">
     <div class="wrapper">
       <h1 class="logo">&gt; Diego</h1>
       <nav>
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="work.html">Work</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="mailto:you@example.com" class="hire-btn">Hire me</a></li>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#hire" class="hire-btn">Hire me</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="hero-flex">
-    <div class="wrapper hero-grid">
-      <div class="hero-text">
-        <h2>Hello I'm <span class="highlight">Diego</span></h2>
-        <h3>Electrical Engineer</h3>
-        <p>
-          I’m an EE student at the University of Indianapolis with hands-on experience in Verilog, C++, MATLAB, and embedded design. I enjoy solving real-world problems and collaborating on creative projects.
-        </p>
-        <div class="hero-buttons">
-          <a href="Resume.pdf" class="btn-resume" download>Download Resume</a>
-          <div class="hero-icons">
-            <a href="https://github.com/yourusername" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" /></a>
-            <a href="https://linkedin.com/in/diego-zuniga-" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" /></a>
-          </div>
-        </div>
-      </div>
-      <div class="hero-photo">
-        <div class="photo-ring-blue">
-          <img src="IMG_3646.JPG" alt="Diego Zuniga" />
+  <!-- Hero Section -->
+  <section class="hero-flex" id="home">
+    <!-- LEFT COLUMN -->
+    <div class="hero-left">
+      <h2>Hello I'm <span class="highlight">Diego</span></h2>
+      <h3>Electrical Engineer</h3>
+      <p>
+        I’m an EE student at the University of Indianapolis with hands-on experience in Verilog, C++, MATLAB, and embedded design.
+        I enjoy solving real-world problems and collaborating on creative projects.
+      </p>
+      <div class="hero-buttons">
+        <a href="Resume.pdf" class="btn-resume" target="_blank">Download Resume</a>
+        <div class="hero-icons">
+          <a href="https://github.com/yourusername" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/diego-zuniga-" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
+          </a>
         </div>
       </div>
     </div>
-    <div class="hero-stats wrapper">
-      <div><span>4</span> Years of experience</div>
-      <div><span>5</span> Projects completed</div>
-      <div><span>1</span> Research completed</div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="hero-right">
+      <div class="photo-ring-blue">
+        <img src="IMG_3646.JPG" alt="Diego Zuniga" />
+      </div>
+    </div>
+
+    <!-- STATS ROW -->
+    <div class="hero-stats">
+      <div>
+        <span>2</span>
+        Years of Experience
+      </div>
+      <div>
+        <span>4</span>
+        Projects Completed
+      </div>
     </div>
   </section>
 </body>
