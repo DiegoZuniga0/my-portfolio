@@ -2,8 +2,8 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #0f172a;
-  color: #f1f5f9;
+  background: #f8fafc;
+  color: #1e293b;
   line-height: 1.6;
   position: relative;
   overflow-x: hidden;
@@ -17,8 +17,9 @@ body {
 
 /* === Navbar === */
 .alt-navbar {
-  background: transparent;
+  background: white;
   padding: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .alt-navbar .wrapper {
@@ -29,7 +30,7 @@ body {
 
 .logo {
   font-weight: 700;
-  color: #38bdf8;
+  color: #2563eb;
   font-size: 1.2rem;
 }
 
@@ -43,7 +44,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: #f3f4f6;
+  color: #1e293b;
   text-decoration: none;
   font-weight: 500;
   padding: 0.4rem 0.75rem;
@@ -53,12 +54,12 @@ nav ul li a {
 
 nav ul li a.active,
 nav ul li a:hover {
-  color: #38bdf8;
+  color: #2563eb;
 }
 
 .hire-btn {
-  background: #38bdf8;
-  color: #0f172a;
+  background: #2563eb;
+  color: white;
   padding: 0.4rem 1rem;
   border-radius: 999px;
   font-weight: bold;
@@ -67,7 +68,7 @@ nav ul li a:hover {
 
 /* === Hero Section === */
 .hero-flex {
-  background: radial-gradient(circle at top left, #1e3a8a, #0f172a);
+  background: linear-gradient(to right, #e0f2fe, #f8fafc);
   padding: 5rem 2rem 3rem;
   position: relative;
   z-index: 1;
@@ -88,22 +89,22 @@ nav ul li a:hover {
 
 .hero-text h2 {
   font-size: 2.5rem;
-  color: #f1f5f9;
+  color: #1e293b;
 }
 
 .hero-text .highlight {
-  color: #38bdf8;
+  color: #2563eb;
 }
 
 .hero-text h3 {
   font-weight: 600;
   margin-top: 0.5rem;
-  color: #e0f2fe;
+  color: #334155;
 }
 
 .hero-text p {
   margin-top: 1rem;
-  color: #94a3b8;
+  color: #475569;
 }
 
 .hero-buttons {
@@ -115,8 +116,8 @@ nav ul li a:hover {
 
 .btn-resume {
   padding: 0.6rem 1.4rem;
-  border: 1px solid #38bdf8;
-  color: #38bdf8;
+  border: 1px solid #2563eb;
+  color: #2563eb;
   font-weight: bold;
   border-radius: 999px;
   text-decoration: none;
@@ -124,14 +125,14 @@ nav ul li a:hover {
 }
 
 .btn-resume:hover {
-  background: #38bdf8;
-  color: #0f172a;
+  background: #2563eb;
+  color: white;
 }
 
 .hero-icons a img {
   width: 20px;
   height: 20px;
-  filter: brightness(0) invert(1);
+  filter: grayscale(1);
   transition: transform 0.3s ease;
 }
 
@@ -150,8 +151,8 @@ nav ul li a:hover {
   width: 240px;
   height: 240px;
   border-radius: 50%;
-  background: #0f172a;
-  box-shadow: 0 0 20px #38bdf8;
+  background: white;
+  box-shadow: 0 0 10px #60a5fa;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,7 +163,7 @@ nav ul li a:hover {
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #0f172a;
+  border: 3px solid white;
 }
 
 /* === Stats Section === */
@@ -171,13 +172,13 @@ nav ul li a:hover {
   display: flex;
   justify-content: space-around;
   font-size: 1.25rem;
-  color: #f3f4f6;
+  color: #1e293b;
   text-align: center;
 }
 
 .hero-stats span {
   font-size: 2.5rem;
-  color: #38bdf8;
+  color: #2563eb;
   display: block;
 }
 
@@ -201,10 +202,10 @@ body::before {
     60px 60px,
     120px 120px,
     180px 180px;
-  opacity: 0.2; /* VISIBLE! */
+  opacity: 0.08;
   z-index: 0;
   pointer-events: none;
-  animation: scrollSymbols 30s linear infinite;
+  animation: scrollSymbols 40s linear infinite;
 }
 
 @keyframes scrollSymbols {
