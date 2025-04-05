@@ -101,7 +101,7 @@ nav ul li a:hover {
 }
 
 .hero-text h2 {
-  font-size: 3.2rem;
+  font-size: 4rem;
   margin-bottom: 0.75rem;
   color: #1e293b;
 }
@@ -111,16 +111,17 @@ nav ul li a:hover {
 }
 
 .hero-text h3 {
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   font-weight: 600;
   margin: 0.75rem 0;
   color: #334155;
 }
 
 .hero-text p {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-top: 0.75rem;
   color: #475569;
+  max-width: 700px;
 }
 
 .hero-buttons {
@@ -131,13 +132,13 @@ nav ul li a:hover {
 }
 
 .btn-resume {
-  padding: 0.8rem 1.8rem;
-  border: 2px solid #2563eb;
+  padding: 1rem 2.2rem;
+  border: 3px solid #2563eb;
   color: #2563eb;
   font-weight: bold;
   border-radius: 999px;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   transition: all 0.3s ease;
 }
 
@@ -147,8 +148,8 @@ nav ul li a:hover {
 }
 
 .hero-icons a img {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   filter: grayscale(1);
   transition: transform 0.3s ease;
 }
