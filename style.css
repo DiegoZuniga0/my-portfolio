@@ -181,18 +181,24 @@ nav ul li a:hover {
   display: block;
 }
 
-/* === Electrical Background Decorations === */
+/* === Animated Electrical Background === */
 body::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -200px;
-  width: 150%;
-  height: 100%;
+  left: 0;
+  width: 200%;
+  height: 200%;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1f/Electrical_symbol_gnd_%28earth%29.svg');
   background-repeat: repeat;
   background-size: 80px;
-  opacity: 0.01;
+  opacity: 0.015;
   z-index: 0;
   pointer-events: none;
+  animation: scrollSymbols 60s linear infinite;
+}
+
+@keyframes scrollSymbols {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-20%, -10%); }
 }
