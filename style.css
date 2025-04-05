@@ -2,8 +2,8 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #f1f5f9;
-  color: #1e293b;
+  background: linear-gradient(to right, #3b82f6, #0ea5e9);
+  color: #f1f5f9;
   line-height: 1.8;
   font-size: 18px;
   height: 100vh;
@@ -18,9 +18,8 @@ body {
 
 /* === Navbar === */
 .alt-navbar {
-  background: #f1f5f9;
+  background: transparent;
   padding: 0.75rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .alt-navbar .wrapper {
@@ -31,7 +30,7 @@ body {
 
 .logo {
   font-weight: 700;
-  color: #2563eb;
+  color: #38bdf8;
   font-size: 1.8rem;
 }
 
@@ -45,7 +44,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: #1e293b;
+  color: #f1f5f9;
   text-decoration: none;
   font-weight: 600;
   padding: 0.4rem 0.8rem;
@@ -56,11 +55,11 @@ nav ul li a {
 
 nav ul li a.active,
 nav ul li a:hover {
-  color: #2563eb;
+  color: #0ea5e9;
 }
 
 .hire-btn {
-  background: #2563eb;
+  background: #0ea5e9;
   color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 999px;
@@ -73,11 +72,11 @@ nav ul li a:hover {
 .hero-flex {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 100px;
+  grid-template-rows: 1fr auto;
   align-items: center;
+  justify-content: center;
   height: calc(100vh - 80px);
   padding: 2rem 4rem;
-  background: #f1f5f9;
   gap: 2rem;
   box-sizing: border-box;
 }
@@ -91,23 +90,23 @@ nav ul li a:hover {
 
 .hero-left h2 {
   font-size: 4rem;
-  color: #1e293b;
+  color: #f1f5f9;
 }
 
 .hero-left .highlight {
-  color: #2563eb;
+  color: #38bdf8;
 }
 
 .hero-left h3 {
   font-size: 2rem;
   font-weight: 600;
   margin-top: 1rem;
-  color: #334155;
+  color: #e2e8f0;
 }
 
 .hero-left p {
   font-size: 1.1rem;
-  color: #475569;
+  color: #cbd5e1;
   margin-top: 1rem;
   line-height: 1.6;
 }
@@ -117,12 +116,13 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .btn-resume {
   padding: 0.75rem 1.75rem;
-  border: 2px solid #2563eb;
-  color: #2563eb;
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
   font-weight: bold;
   border-radius: 999px;
   text-decoration: none;
@@ -131,14 +131,14 @@ nav ul li a:hover {
 }
 
 .btn-resume:hover {
-  background: #2563eb;
-  color: white;
+  background: #38bdf8;
+  color: #0f172a;
 }
 
 .hero-icons a img {
   width: 28px;
   height: 28px;
-  filter: grayscale(1);
+  filter: brightness(0) invert(1);
   transition: transform 0.3s ease;
 }
 
@@ -153,19 +153,19 @@ nav ul li a:hover {
 }
 
 .photo-ring-blue {
-  width: 320px;
-  height: 320px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   background: white;
-  box-shadow: 0 0 12px #60a5fa;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .photo-ring-blue img {
-  width: 280px;
-  height: 280px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid white;
@@ -178,14 +178,14 @@ nav ul li a:hover {
   justify-content: center;
   gap: 4rem;
   font-size: 1.3rem;
-  color: #1e293b;
+  color: #f1f5f9;
   text-align: center;
   align-self: end;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .hero-stats span {
   font-size: 2.5rem;
-  color: #2563eb;
+  color: #0ea5e9;
   display: block;
 }
