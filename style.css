@@ -1,9 +1,52 @@
-/* General layout stays the same, just override color accents */
+/* === General Setup === */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0f172a;
+  color: #f1f5f9;
+  line-height: 1.6;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* === Navbar === */
+.alt-navbar {
+  background: transparent;
+  padding: 1.5rem 0;
+}
+
+.alt-navbar .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .logo {
   font-weight: 700;
   color: #38bdf8;
   font-size: 1.2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: #f3f4f6;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  transition: 0.2s;
 }
 
 nav ul li a.active,
@@ -18,6 +61,12 @@ nav ul li a:hover {
   border-radius: 999px;
   font-weight: bold;
   text-decoration: none;
+}
+
+/* === Hero Section === */
+.hero-flex {
+  background: radial-gradient(circle at top left, #1e3a8a, #0f172a);
+  padding: 5rem 2rem 3rem;
 }
 
 .hero-grid {
@@ -35,7 +84,7 @@ nav ul li a:hover {
 
 .hero-text h2 {
   font-size: 2.5rem;
-  color: #f3f4f6;
+  color: #f1f5f9;
 }
 
 .hero-text .highlight {
@@ -67,6 +116,12 @@ nav ul li a:hover {
   font-weight: bold;
   border-radius: 999px;
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-resume:hover {
+  background: #38bdf8;
+  color: #0f172a;
 }
 
 .hero-icons a img {
@@ -80,6 +135,7 @@ nav ul li a:hover {
   transform: scale(1.2);
 }
 
+/* === Profile Image + Ring === */
 .hero-photo {
   flex: 1;
   display: flex;
@@ -106,12 +162,19 @@ nav ul li a:hover {
   border: 3px solid #0f172a;
 }
 
+@keyframes spin {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+/* === Stats Section === */
 .hero-stats {
   margin-top: 4rem;
   display: flex;
   justify-content: space-around;
   font-size: 1.25rem;
   color: #f3f4f6;
+  text-align: center;
 }
 
 .hero-stats span {
@@ -119,9 +182,3 @@ nav ul li a:hover {
   color: #38bdf8;
   display: block;
 }
-
-@keyframes spin {
-  0% { transform: rotate(0); }
-  100% { transform: rotate(360deg); }
-}
-
