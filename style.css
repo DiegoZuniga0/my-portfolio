@@ -28,7 +28,7 @@ body {
 .logo {
   font-weight: 700;
   color: #3b82f6;
-  font-size: 1.8rem;
+  font-size: 3.5rem;
 }
 
 nav ul {
@@ -131,7 +131,7 @@ nav ul li a:hover {
 .hero-icons a img {
   width: 32px;
   height: 32px;
-  filter: brightness(0) invert(1);
+  filter: invert(38%) sepia(96%) saturate(1266%) hue-rotate(200deg) brightness(95%) contrast(101%);
   transition: transform 0.3s ease;
 }
 
