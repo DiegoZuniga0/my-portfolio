@@ -8,7 +8,7 @@ body {
   position: relative;
   overflow: hidden;
   font-size: 18px;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .wrapper {
@@ -78,9 +78,9 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   box-sizing: border-box;
+  overflow: hidden;
   position: relative;
 }
 
@@ -95,12 +95,14 @@ nav ul li a:hover {
 
 .hero-text {
   flex: 1;
-  max-width: 600px;
+  max-width: 520px;
+  overflow-y: auto;
+  padding-right: 1rem;
 }
 
 .hero-text h2 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
+  font-size: 3.2rem;
+  margin-bottom: 0.75rem;
   color: #1e293b;
 }
 
@@ -109,20 +111,20 @@ nav ul li a:hover {
 }
 
 .hero-text h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin: 0.5rem 0;
+  margin: 0.75rem 0;
   color: #334155;
 }
 
 .hero-text p {
-  font-size: 1.25rem;
-  margin-top: 0.5rem;
+  font-size: 1rem;
+  margin-top: 0.75rem;
   color: #475569;
 }
 
 .hero-buttons {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   display: flex;
   align-items: center;
   gap: 2rem;
