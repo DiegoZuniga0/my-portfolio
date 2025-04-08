@@ -6,13 +6,88 @@
   <title>Home | Diego Zuniga</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .alt-navbar {
+      padding: 0.75rem 0;
+      margin-bottom: 0;
+      background: #0f172a;
+    }
+
+    .alt-navbar .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .logo {
+      color: #60a5fa;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: #f8fafc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav ul li a.active {
+      color: #60a5fa;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: #f8fafc;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #1e293b;
+        padding: 1rem;
+        position: absolute;
+        top: 60px;
+        right: 2rem;
+        border-radius: 8px;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Header / Navbar -->
   <header class="alt-navbar">
     <div class="wrapper">
       <h1 class="logo">&gt; Diego</h1>
-      
+
       <!-- Hamburger icon -->
       <div class="menu-toggle">
         <span></span>
