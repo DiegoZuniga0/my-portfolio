@@ -7,47 +7,81 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    body {
+      background: linear-gradient(to right, #0f172a, #1e3a8a);
+      color: #f8fafc;
+    }
+
     .about-wrapper {
       display: flex;
       flex-wrap: wrap;
-      gap: 2rem;
       margin-top: 3rem;
+      gap: 2rem;
     }
 
     .tabs {
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      flex: 0 0 180px;
     }
 
     .tabs button {
       padding: 0.8rem 1.2rem;
-      background: #1e3a8a;
-      color: white;
+      background: #1e293b;
+      color: #f8fafc;
       border: none;
       border-radius: 6px;
       font-weight: bold;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.2s;
     }
 
-    .tabs button:hover,
     .tabs button.active {
       background: #3b82f6;
     }
 
     .tab-content {
       flex: 1;
-      background: rgba(255, 255, 255, 0.05);
       padding: 2rem;
-      border-radius: 8px;
-      min-height: 200px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      min-height: 300px;
+    }
+
+    .tab-content h3 {
+      margin-top: 0;
       color: #f8fafc;
+      font-size: 1.8rem;
     }
 
     .tab-content p {
-      font-size: 1.3rem;
       color: #cbd5e1;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #60a5fa;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .about-wrapper {
+        flex-direction: column;
+      }
+
+      .tabs {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .tabs button {
+        flex: 1 1 auto;
+      }
     }
   </style>
 </head>
@@ -77,9 +111,10 @@
           <button class="tab-button" data-tab="skills">Skills</button>
         </div>
 
-        <!-- Tab content area -->
+        <!-- Content -->
         <div class="tab-content" id="tab-display">
-          <p>Click a section on the left to view more about me.</p>
+          <h3>Experience</h3>
+          <p>Click one of the tabs on the left to learn more about my background in engineering, education, and technical skills.</p>
         </div>
       </div>
     </div>
@@ -90,9 +125,18 @@
     const display = document.getElementById('tab-display');
 
     const content = {
-      experience: `<p>You can add your internship experience, leadership roles, or engineering projects here.</p>`,
-      education: `<p>Include your degree program, graduation date, and academic achievements.</p>`,
-      skills: `<p>Highlight technical tools you know like Verilog, MATLAB, FPGA, C++, and soft skills like collaboration or leadership.</p>`
+      experience: `
+        <h3>Research Assistant<br><small style="color:#38bdf8;">University of Indianapolis</small></h3>
+        <p>Collaborated with a professor to design models simulating auditory neural responses. Worked with convolutional neural networks and regularly participated in project discussions to align goals and solve complex research problems.</p>
+      `,
+      education: `
+        <h3>University of Indianapolis</h3>
+        <p>Pursuing a B.S. in Electrical Engineering, graduating May 2025. Member of IEEE, experienced with FPGA development, embedded systems, and collaborative engineering design projects.</p>
+      `,
+      skills: `
+        <h3>Technical & Soft Skills</h3>
+        <p>Proficient in Verilog, MATLAB, C++, and embedded circuit design. Skilled at teamwork, clear communication, and leadership across multidisciplinary engineering projects.</p>
+      `
     };
 
     buttons.forEach(btn => {
