@@ -7,6 +7,27 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.1rem;
+  color: #f8fafc;
+}
+
+.skill img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
     body {
       background: linear-gradient(to right, #0f172a, #1e3a8a);
       color: #f8fafc;
@@ -261,13 +282,23 @@
   `
 },
         skills: {
-          title: '🛠️ My Skills',
-          desc: 'A quick look at my technical abilities and soft skills that empower my engineering work.',
-          html: `
-            <h3>Technical & Soft Skills</h3>
-            <p>Proficient in Verilog, C++, MATLAB, and embedded circuit design. Skilled in microcontroller programming, hardware integration, and schematic design. Strong collaborator with experience leading teams and presenting project results to clients.</p>
-          `
-        }
+  title: '🛠️ My Skills',
+  desc: 'A quick look at my technical abilities and soft skills that empower my engineering work.',
+  html: `
+    <h3>Technical & Soft Skills</h3>
+    <div class="skills-grid">
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/verilog/verilog-original.svg" alt="Verilog" /> Verilog & Digital Design</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="Embedded" /> Embedded Systems</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" /> C++ Programming</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" alt="MATLAB" /> MATLAB & Data Processing</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Circuit" /> Circuit Design & Prototyping</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Microcontrollers" /> Microcontrollers (PSoC, Arduino)</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" alt="Communication" /> Team Collaboration</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="Docs" /> Technical Documentation</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" alt="PM" /> Project Management</div>
+    </div>
+  `
+}
       };
 
       buttons.forEach(btn => {
