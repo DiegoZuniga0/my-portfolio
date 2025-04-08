@@ -5,6 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Diego Zuniga</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .about-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .tabs {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .tabs button {
+      padding: 0.8rem 1.2rem;
+      background: #1e3a8a;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .tabs button:hover,
+    .tabs button.active {
+      background: #3b82f6;
+    }
+
+    .tab-content {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 8px;
+      min-height: 200px;
+      color: #f8fafc;
+    }
+
+    .tab-content p {
+      font-size: 1.3rem;
+      color: #cbd5e1;
+    }
+  </style>
 </head>
 <body>
   <header class="alt-navbar">
@@ -24,8 +69,40 @@
   <section class="section">
     <div class="wrapper">
       <h2>About Me</h2>
-      <p>I’m a senior Electrical Engineering student at the University of Indianapolis. I’ve developed hands-on skills in circuit design, embedded systems, and programming using Verilog, C++, and MATLAB. I thrive in collaborative environments and enjoy solving practical engineering problems that make a real-world impact.</p>
+      <div class="about-wrapper">
+        <!-- Tabs -->
+        <div class="tabs">
+          <button class="tab-button active" data-tab="experience">Experience</button>
+          <button class="tab-button" data-tab="education">Education</button>
+          <button class="tab-button" data-tab="skills">Skills</button>
+        </div>
+
+        <!-- Tab content area -->
+        <div class="tab-content" id="tab-display">
+          <p>Click a section on the left to view more about me.</p>
+        </div>
+      </div>
     </div>
   </section>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const display = document.getElementById('tab-display');
+
+    const content = {
+      experience: `<p>You can add your internship experience, leadership roles, or engineering projects here.</p>`,
+      education: `<p>Include your degree program, graduation date, and academic achievements.</p>`,
+      skills: `<p>Highlight technical tools you know like Verilog, MATLAB, FPGA, C++, and soft skills like collaboration or leadership.</p>`
+    };
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const tab = btn.dataset.tab;
+        display.innerHTML = content[tab];
+      });
+    });
+  </script>
 </body>
 </html>
