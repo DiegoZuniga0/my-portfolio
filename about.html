@@ -7,6 +7,22 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    .about-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-header h2 {
+  font-size: 2.2rem;
+  color: #60a5fa;
+  margin-bottom: 0.5rem;
+}
+
+.about-header .tab-sub {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
     body {
       background: linear-gradient(to right, #0f172a, #1e3a8a);
       color: #f8fafc;
@@ -146,37 +162,55 @@
   </section>
 
   <script>
-    const buttons = document.querySelectorAll('.tab-button');
-    const display = document.getElementById('tab-display');
+   const display = document.getElementById('tab-display');
+const header = document.getElementById('tab-header');
 
-    const content = {
-      experience: `
-        <h3>Research Assistant<br><small style="color:#38bdf8;">University of Indianapolis</small></h3>
-        <p>Collaborated with a professor to design models simulating auditory neural responses. Worked with convolutional neural networks and regularly participated in project discussions to align goals and solve complex research problems.</p>
-      `,
-      education: `
-        <h3>University of Indianapolis</h3>
-        <p>Pursuing a B.S. in Electrical Engineering, graduating May 2025. Member of IEEE, experienced with FPGA development, embedded systems, and collaborative engineering design projects.</p>
-      `,
-      skills: `
-        <h3>Technical & Soft Skills</h3>
-        <p>Proficient in Verilog, MATLAB, C++, and embedded circuit design. Skilled at teamwork, clear communication, and leadership across multidisciplinary engineering projects.</p>
-      `
-    };
+const content = {
+  experience: {
+    title: '💼 My Experience',
+    desc: 'In this section, I’ll share highlights from my work experience and hands-on engineering projects.',
+    html: `
+      <h3>Research Assistant<br><small style="color:#38bdf8;">University of Indianapolis</small></h3>
+      <p>Collaborated with a professor to design models simulating auditory neural responses...</p>
+    `
+  },
+  education: {
+    title: '🎓 My Education',
+    desc: 'Details about my academic journey and achievements while pursuing Electrical Engineering.',
+    html: `
+      <h3>University of Indianapolis</h3>
+      <p>Pursuing a B.S. in Electrical Engineering, graduating May 2025...</p>
+    `
+  },
+  skills: {
+    title: '🛠️ My Skills',
+    desc: 'A quick look at my technical abilities and soft skills that empower my engineering work.',
+    html: `
+      <h3>Technical & Soft Skills</h3>
+      <p>Proficient in Verilog, MATLAB, C++, and embedded systems...</p>
+    `
+  }
+};
 
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        buttons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
 
-        // Animate fade-in
-        display.style.opacity = 0;
-        setTimeout(() => {
-          display.innerHTML = content[btn.dataset.tab];
-          display.style.animation = 'fadeIn 0.4s ease-in-out forwards';
-        }, 200);
-      });
-    });
+    const tab = btn.dataset.tab;
+
+    // Animate and swap content
+    display.style.opacity = 0;
+    setTimeout(() => {
+      display.innerHTML = content[tab].html;
+      display.style.animation = 'fadeIn 0.4s ease-in-out forwards';
+    }, 200);
+
+    // Update dynamic header
+    header.querySelector('h2').textContent = content[tab].title;
+    header.querySelector('.tab-sub').textContent = content[tab].desc;
+  });
+});
   </script>
 </body>
 </html>
