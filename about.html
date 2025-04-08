@@ -161,56 +161,53 @@
     </div>
   </section>
 
-  <script>
-   const display = document.getElementById('tab-display');
-const header = document.getElementById('tab-header');
+<script>
+  const buttons = document.querySelectorAll('.tab-button'); // ✅ This was missing
+  const display = document.getElementById('tab-display');
+  const header = document.getElementById('tab-header');
 
-const content = {
-  experience: {
-    title: '💼 My Experience',
-    desc: 'In this section, I’ll share highlights from my work experience and hands-on engineering projects.',
-    html: `
-      <h3>Research Assistant<br><small style="color:#38bdf8;">University of Indianapolis</small></h3>
-      <p>Collaborated with a professor to design models simulating auditory neural responses...</p>
-    `
-  },
-  education: {
-    title: '🎓 My Education',
-    desc: 'Details about my academic journey and achievements while pursuing Electrical Engineering.',
-    html: `
-      <h3>University of Indianapolis</h3>
-      <p>Pursuing a B.S. in Electrical Engineering, graduating May 2025...</p>
-    `
-  },
-  skills: {
-    title: '🛠️ My Skills',
-    desc: 'A quick look at my technical abilities and soft skills that empower my engineering work.',
-    html: `
-      <h3>Technical & Soft Skills</h3>
-      <p>Proficient in Verilog, MATLAB, C++, and embedded systems...</p>
-    `
-  }
-};
+  const content = {
+    experience: {
+      title: '💼 My Experience',
+      desc: 'In this section, I’ll share highlights from my work experience and hands-on engineering projects.',
+      html: `
+        <h3>Research Assistant<br><small style="color:#38bdf8;">University of Indianapolis</small></h3>
+        <p>Collaborated with a professor to design models simulating auditory neural responses...</p>
+      `
+    },
+    education: {
+      title: '🎓 My Education',
+      desc: 'Details about my academic journey and achievements while pursuing Electrical Engineering.',
+      html: `
+        <h3>University of Indianapolis</h3>
+        <p>Pursuing a B.S. in Electrical Engineering, graduating May 2025...</p>
+      `
+    },
+    skills: {
+      title: '🛠️ My Skills',
+      desc: 'A quick look at my technical abilities and soft skills that empower my engineering work.',
+      html: `
+        <h3>Technical & Soft Skills</h3>
+        <p>Proficient in Verilog, MATLAB, C++, and embedded systems...</p>
+      `
+    }
+  };
 
-buttons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    buttons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
 
-    const tab = btn.dataset.tab;
+      const tab = btn.dataset.tab;
 
-    // Animate and swap content
-    display.style.opacity = 0;
-    setTimeout(() => {
-      display.innerHTML = content[tab].html;
-      display.style.animation = 'fadeIn 0.4s ease-in-out forwards';
-    }, 200);
+      display.style.opacity = 0;
+      setTimeout(() => {
+        display.innerHTML = content[tab].html;
+        display.style.animation = 'fadeIn 0.4s ease-in-out forwards';
+      }, 200);
 
-    // Update dynamic header
-    header.querySelector('h2').textContent = content[tab].title;
-    header.querySelector('.tab-sub').textContent = content[tab].desc;
+      header.querySelector('h2').textContent = content[tab].title;
+      header.querySelector('.tab-sub').textContent = content[tab].desc;
+    });
   });
-});
-  </script>
-</body>
-</html>
+</script>
