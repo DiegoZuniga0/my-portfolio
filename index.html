@@ -12,6 +12,14 @@
   <header class="alt-navbar">
     <div class="wrapper">
       <h1 class="logo">&gt; Diego</h1>
+      
+      <!-- Hamburger icon -->
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <nav>
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
@@ -68,5 +76,15 @@
       Research Completed
     </div>
   </div>
+
+  <!-- Hamburger JS -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
