@@ -168,13 +168,18 @@
 
   const content = {
     experience: {
-      title: '💼 My Experience',
-      desc: 'In this section, I’ll share highlights from my work experience and hands-on engineering projects.',
-      html: `
-        <h3>Research Assistant<br><small style="color:#38bdf8;">University of Indianapolis</small></h3>
-        <p>Collaborated with a professor to design models simulating auditory neural responses...</p>
-      `
-    },
+  title: '💼 My Experience',
+  desc: 'In this section, I’ll share highlights from my work experience and hands-on engineering projects.',
+  html: `
+    <h3>Research Assistant</h3>
+    <ul style="list-style: none; padding-left: 1rem;">
+      <li style="color: #38bdf8; font-size: 0.95rem; margin-bottom: 1rem;">• University of Indianapolis</li>
+    </ul>
+    <p>This research aims to improve a circuit that collects data from a Sodium Iodide gamma-ray scintillator. This will be done using a microcontroller such as the CY8CPROTO-063-BLE and other components such as a DC-to-DC converter.</p>
+    <p>The circuit measures very brief (1 to 2 µsec) electrical pulses. These pulses are produced by gamma rays captured by the scintillator and converted into visible light that is subsequently converted into electric pulses picked up by the circuit.</p>
+    <p>The pulses are measured and categorized to produce an energy spectrum to make inferences about the gamma-ray source. Improvements are being made to the design of the circuit so that it can be fabricated on a printed circuit board and made available for student use.</p>
+  `
+},
     education: {
       title: '🎓 My Education',
       desc: 'Details about my academic journey and achievements while pursuing Electrical Engineering.',
